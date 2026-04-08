@@ -1,0 +1,26 @@
+name: exe3
+
+on:
+  push:
+    paths:
+      - 'exe3/main.c'
+jobs:
+  exe3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: insper-embarcados/pico-build@v1
+      - uses: insper-embarcados/actions-wokwi-test@v3
+        with:
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+          test_name: exe3
+      - uses: insper-embarcados/actions-firmware-rubric-check@v0
+        with:
+          c_file: exe3/main.c
+          rubric_file: exe3/rubric_firmware.yml
+      - uses: insper-embarcados/actions-embedded-check@v1
+        with:
+          c_file: exe3/main.c
+      - uses: insper-embarcados/actions-cppcheck@v1
+        with:
+          c_file: exe3/main.c
