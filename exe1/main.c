@@ -6,6 +6,7 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 
+// bugou?
 
 const int LED_PIN_R = 4;
 const int LED_PIN_G = 6;
