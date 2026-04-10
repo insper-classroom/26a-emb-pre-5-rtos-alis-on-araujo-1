@@ -78,7 +78,7 @@ void btn_2_task(void *p) {
     }
   }
 }
-~.m
+
 int main() {
   stdio_init_all();
   printf("Start RTOS \n");

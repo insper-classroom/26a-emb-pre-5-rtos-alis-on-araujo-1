@@ -6,6 +6,7 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 
+//bugou tudo fds
 const int BTN_PIN_R = 28;
 const int BTN_PIN_G = 26;
 
